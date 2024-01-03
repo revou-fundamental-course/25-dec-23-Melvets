@@ -1,0 +1,194 @@
+<!-- 
+    YANG KURANG
+
+    1. LINK KE SOSMED
+    2. JAVASCRIPT
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATIK</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>KaTik</h1>
+            <div class="navbar-nav">
+                <a href="#keliling">Keliling Segitiga</a>
+                <p>|</p>
+                <a href="#luas">Luas Segitiga</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- welcome -->
+        <section class="welcome">
+            <div class="flex">
+                <div class="text-group">
+                    <h1><span>Hai Sobat,</span> <br> Selamat Datang di KaTik!</h1>
+                    <p>Kalkulator Matematik (KaTik) adalah sebuah web apps sederhana yang berfungsi untuk menghitung nilai keliling dan luas segitiga.</p>
+                    <div class="button">
+                        <a href="#" class="btn-keliling">Keliling Segitiga<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
+                        <a href="#" class="btn-luas">Luas Segitiga <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
+                    </div>
+                </div>
+                <div class="pic1">
+                    <img src="assets/pic1.png" alt="Ilustrasi Kalkulator">
+                </div>
+            </div>
+
+            
+            <div class="kotak"></div>
+        </section>
+
+        <!-- Keliling -->
+        <section class="keliling" id="keliling">
+            <div class="judul">
+                <div class="garis"></div>
+                <h2>Menghitung Keliling Segitiga</h2>
+            </div>
+            <div class="flex">
+                <div class="">
+                    <div class="form">
+                        <h3>Hitung Keliling Segitiga</h3>
+                        <form action="" method="post">
+                            <div class="input_ input_a">
+                                <label for="input-a">Masukkan nilai a</label> <br>
+                                <input id="input-a" type="number" name="input-a" class="input-a">
+                            </div>
+                            <div class="input_ input_b">
+                                <label for="input-b">Masukkan nilai b</label> <br>
+                                <input id="input-b" type="number" name="input-b" class="input-b">
+                            </div>
+                            <div class="input_ input_c">
+                                <label for="input-c">Masukkan nilai c</label> <br>
+                                <input id="input-c" type="number" name="input-c" class="input-c">
+                            </div>
+
+                            <button type="button" onclick="keliling()">Hitung</button>
+                            <button>Reset</button>
+
+                        </form>
+                    </div>
+                    <div class="hasil-keliling">
+                        <h3>Hasil</h3>
+                        <p>K = a + b + c</p>
+                        <p>K = <span id="a"></span> + <span id="b"></span> + <span id="c"></span></p>
+                        <p class="hasil-segitiga">K = <span id="hasil"></span></p>
+                    </div>
+                </div>
+                <div class="image">
+                    <div class="img">
+                        <img src="assets/keliling-segitiga.png" alt="Gambar Keliling Segitiga">
+                    </div>
+                    <div class="rumus">
+                        <p class="rumus_">Keliling = a + b + c</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luas -->
+        <section class="luas" id="luas">
+            <div class="judul">
+                <h2>Menghitung Luas Segitiga</h2>
+                <div class="garis"></div>
+            </div>
+            <div class="flex">
+                <div class="image">
+                    <div class="img">
+                        <img src="assets/luas-segitiga.png" alt="Gambar Keliling Segitiga">
+                    </div>
+                    <div class="rumus">
+                        <p class="rumus_">Luas = 1/2 x a x t</p>
+                        <p class="detail">a = alas | t = tinggi</p>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form">
+                        <h3>Hitung Luas Segitiga</h3>
+                        <form action="">
+                            <div class="input_ input_a">
+                                <label for="input-a">Masukkan nilai a</label> <br>
+                                <input id="input-a" type="number" name="input-a" class="input-a">
+                            </div>
+                            <div class="input_ input_b">
+                                <label for="input-b">Masukkan nilai t</label> <br>
+                                <input id="input-b" type="number" name="input-b" class="input-b">
+                            </div>
+
+                            <button>Hitung</button>
+                            <button>Reset</button>
+
+                        </form>
+                    </div>
+                    <div class="hasil-luas">
+                        <h3>Hasil</h3>
+                        <p>K = a + b + c</p>
+                        <p>K = <span id="a"></span> + <span id="b"></span> + <span id="c"></span></p>
+                        <p class="hasil-segitiga">K = <span id="hasil"></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-flex">
+            <div class="bio">
+                <h3>KaTik</h3>
+                <p>Kalkulator Matematik (KaTik) adalah sebuah web apps sederhana yang berfungsi untuk menghitung nilai keliling dan luas segitiga.</p>
+            </div>
+            <div class="nav">
+                <h3>Tautan</h3>
+                <a href="#keliling">Keliling Segitiga</a> <br>
+                <a href="#luas">Luas Segitiga</a>
+            </div>
+        </div>
+        <div class="footer-end">
+            <div class="copyright">
+                <p>Dibuat oleh <a href="">Camela Devs </a> | Copyright 2024.</p>
+            </div>
+            <div class="sosmed">
+                <a href="">
+                    <div class="icon">
+                        <img src="assets/icon/brand-instagram.svg" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="icon">
+                        <img src="assets/icon/brand-facebook-filled.svg" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="icon">
+                        <img src="assets/icon/brand-github.svg" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="icon">
+                        <img src="assets/icon/brand-linkedin.svg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="privacy">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

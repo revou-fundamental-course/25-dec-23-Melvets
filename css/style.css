@@ -1,0 +1,368 @@
+:root{
+    --yellow: #FFF056;
+    --gold: #FFD700;
+    --darkgold: #d3be00;
+    --lightyellow: #FFEB3B; 
+    --darkorange: #FFA500;
+}
+
+/* ===================================================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===================================================================== */
+
+header {
+    padding: 1rem 15%;
+    background-color: var(--yellow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-nav a {
+    padding: 0 10px;
+    font-size: 0.8em;
+    color: #252525;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* ===================================================================== */
+
+.welcome {
+    background-color: whitesmoke;
+}
+
+.flex {
+    padding:  1rem 15%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome .text-group {
+    width: 400px;
+}
+
+.welcome .text-group h1 {
+    line-height: 35px;
+    margin-bottom: 0.7rem;
+    border-left: 5px solid var(--yellow);
+    padding-left: 1rem;
+}
+
+.welcome .text-group h1 span {
+    font-size: 2em;
+}
+
+.welcome .text-group .button {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.welcome .text-group .button a {
+    text-decoration: none;
+    color: #252525;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--yellow);
+    padding: 0.4rem 1rem;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.welcome .text-group .button a svg {
+    transition: transform 0.3s ease-in-out;
+    padding-left: 5px;
+}
+
+.welcome .text-group .button a:hover svg{
+      transform: translateX(10px);
+}
+
+.pic1 {
+    width: 400px;
+    height: 400px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic1 img {
+    width: 400px;
+}
+
+.kotak {
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--yellow);
+    border-radius: 100% 100% 0 0;
+}
+
+/* ===================================================================== */
+
+.keliling, .luas {
+    min-height: 100vh;
+    background-color: var(--yellow);
+    padding: 1rem 15%;
+}
+
+.keliling .flex , .luas .flex {
+    padding: 0 0;
+}
+
+.keliling h2 {
+    margin-top: 1rem;
+    padding-left: 10px;
+    color: #252525;
+    border-left: #252525 solid 5px;
+}
+
+.keliling .judul {
+    display: flex;
+    align-items: center;
+}
+
+.keliling .judul .garis {
+    width: 80%;
+    height: 5px;
+    background-color: #252525;
+    margin-top: 1rem;
+}
+
+.luas h2 {
+    margin-top: 1rem;
+    padding-right: 10px;
+    text-align: end;
+    color: #252525;
+    border-right: #252525 solid 5px;
+}
+
+.luas .judul {
+    display: flex;
+    align-items: center;
+}
+
+.luas .judul .garis {
+    width: 80%;
+    height: 5px;
+    background-color: #252525;
+    margin-top: 1rem;
+}
+
+.flex .form{
+    background-color: #FAFAFA;
+    padding: 20px 30px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    /* width: 400px; */
+    /* height: 200px; */
+}
+
+.flex .form h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+.rumus .rumus_ {
+    text-align: center;
+    padding-left: 0;
+    font-weight: bold;
+}
+
+.rumus .detail {
+    color: #333333;
+    text-align: center;
+}
+
+.flex .form .input_ input {
+    padding: 8px;
+    width: 380px;
+    border: lightgray solid 1px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.flex .form .input_ input:focus{
+    border: #FFD700 solid 1px;
+    outline: none;
+}
+
+.flex .form form button {
+    margin-top: 1rem;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: var(--yellow);
+    border: none;
+}
+
+.flex .form form button:hover {
+    background-color: var(--gold);
+    cursor: pointer;
+}
+
+.flex .hasil-keliling {
+    background-color: #FAFAFA;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 400px;
+    display: none;
+}
+
+.flex .hasil-luas {
+    background-color: #FAFAFA;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 400px;
+    display: none;
+}
+
+.hasil-segitiga {
+    font-weight: bold;
+}
+
+.flex .image .img {
+    background-color: #FAFAFA;
+    border-radius: 50%;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.flex .image .img img{
+    width: 300px;
+}
+
+/* ===================================================================== */
+
+footer .footer-flex {
+    padding: 2rem 15%;
+    /* background-color: #776829; */
+    background-color: #252525;
+
+    color: #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-flex .bio {
+    width: 350px;
+}
+
+footer .footer-flex .nav {
+    width: 350px;
+    color: var(--yellow);
+}
+
+footer .footer-flex .bio h3 {
+    color: var(--yellow);
+}
+
+footer .footer-flex .bio p {
+    font-size: 0.8em;
+}
+
+footer .footer-flex .nav a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #FAFAFA;
+}
+
+footer .footer-flex .nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-end {
+    /* background-color: #4e431a; */
+    background-color: #222222;
+    padding: 1rem 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    width: 30%;
+}
+
+.copyright p {
+    color: #FAFAFA;
+    font-size: 0.8em;
+}
+
+.copyright p a {
+    color: var(--yellow);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.copyright p a:hover {
+    text-decoration: underline;
+}
+
+.sosmed {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
+
+.sosmed .icon {
+    width: 30px;
+    height: 30px;
+    border: #FAFAFA solid 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+}
+
+.sosmed .icon:hover {
+    border: var(--darkorange) solid 2px;
+}
+
+.privacy {
+    width: 30%;
+    justify-content: end;
+    text-align: end;
+}
+
+.privacy a{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #FAFAFA;
+    margin-left: 5px;
+}
+
+.privacy a:hover {
+    text-decoration: underline;
+}
