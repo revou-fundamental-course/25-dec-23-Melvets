@@ -1,17 +1,9 @@
-<!-- 
-    YANG KURANG
-
-    1. LINK KE SOSMED
-    2. JAVASCRIPT
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KATIK</title>
+    <title>KaTik - Kalkulator Matematik</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,68 +23,72 @@
     </header>
 
     <main>
-        <!-- welcome -->
+        <!-- SECTION WELCOME -->
         <section class="welcome">
             <div class="flex">
                 <div class="text-group">
                     <h1><span>Hai Sobat,</span> <br> Selamat Datang di KaTik!</h1>
                     <p>Kalkulator Matematik (KaTik) adalah sebuah web apps sederhana yang berfungsi untuk menghitung nilai keliling dan luas segitiga.</p>
                     <div class="button">
-                        <a href="#" class="btn-keliling">Keliling Segitiga<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
-                        <a href="#" class="btn-luas">Luas Segitiga <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
+                        <a href="#keliling" class="btn-keliling">Keliling Segitiga<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
+                        <a href="#luas" class="btn-luas">Luas Segitiga <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg></a>
                     </div>
                 </div>
-                <div class="pic1">
+                <div class="pic-welcome">
                     <img src="assets/pic1.png" alt="Ilustrasi Kalkulator">
                 </div>
             </div>
-
-            
             <div class="kotak"></div>
         </section>
 
-        <!-- Keliling -->
+        <!-- SECTION KELILING SEGITIGA -->
         <section class="keliling" id="keliling">
             <div class="judul">
                 <div class="garis"></div>
                 <h2>Menghitung Keliling Segitiga</h2>
             </div>
             <div class="flex">
-                <div class="">
+                <div>
                     <div class="form">
                         <h3>Hitung Keliling Segitiga</h3>
-                        <form action="" method="post">
-                            <div class="input_ input_a">
+                        <form method="post">
+                            <div class="input input-a">
                                 <label for="input-a">Masukkan nilai a</label> <br>
                                 <input id="input-a" type="number" name="input-a" class="input-a">
+                                <p id="message-a"></p>
                             </div>
-                            <div class="input_ input_b">
+                            <div class="input input-b">
                                 <label for="input-b">Masukkan nilai b</label> <br>
                                 <input id="input-b" type="number" name="input-b" class="input-b">
+                                <p id="message-b"></p>
+
                             </div>
-                            <div class="input_ input_c">
+                            <div class="input input-c">
                                 <label for="input-c">Masukkan nilai c</label> <br>
                                 <input id="input-c" type="number" name="input-c" class="input-c">
+                                <p id="message-c"></p>
                             </div>
 
-                            <button type="button" onclick="keliling()">Hitung</button>
-                            <button>Reset</button>
-
+                            <button type="button" onclick="keliling()" id="hitung-keliling">Hitung</button>
+                            <button type="button" onclick="hilang()" id="reset">Reset</button>
                         </form>
                     </div>
+
                     <div class="hasil-keliling">
                         <h3>Hasil</h3>
                         <p>K = a + b + c</p>
                         <p>K = <span id="a"></span> + <span id="b"></span> + <span id="c"></span></p>
-                        <p class="hasil-segitiga">K = <span id="hasil"></span></p>
+                        <p class="hasil-segitiga">K = <span id="hasil-keliling"></span></p>
                     </div>
+
                 </div>
+
                 <div class="image">
                     <div class="img">
                         <img src="assets/keliling-segitiga.png" alt="Gambar Keliling Segitiga">
                     </div>
                     <div class="rumus">
-                        <p class="rumus_">Keliling = a + b + c</p>
+                        <p class="detail-rumus">Keliling = a + b + c</p>
                     </div>
                 </div>
             </div>
@@ -110,33 +106,35 @@
                         <img src="assets/luas-segitiga.png" alt="Gambar Keliling Segitiga">
                     </div>
                     <div class="rumus">
-                        <p class="rumus_">Luas = 1/2 x a x t</p>
+                        <p class="detail-rumus">Luas = 1/2 x a x t</p>
                         <p class="detail">a = alas | t = tinggi</p>
                     </div>
                 </div>
-                <div class="">
+                <div>
                     <div class="form">
                         <h3>Hitung Luas Segitiga</h3>
                         <form action="">
-                            <div class="input_ input_a">
-                                <label for="input-a">Masukkan nilai a</label> <br>
-                                <input id="input-a" type="number" name="input-a" class="input-a">
+                            <div class="input input-alas">
+                                <label for="input-alas">Masukkan nilai alas</label> <br>
+                                <input id="input-alas" type="number"  class="input-alas">
+                                <p id="message-alas"></p>
                             </div>
-                            <div class="input_ input_b">
-                                <label for="input-b">Masukkan nilai t</label> <br>
-                                <input id="input-b" type="number" name="input-b" class="input-b">
+                            <div class="input input-tinggi">
+                                <label for="input-tinggi">Masukkan nilai tinggi</label> <br>
+                                <input id="input-tinggi" type="number" class="input-tinggi">
+                                <p id="message-tinggi"></p>
                             </div>
 
-                            <button>Hitung</button>
-                            <button>Reset</button>
+                            <button type="button" onclick="luas()" id="hitung-luas">Hitung</button>
+                            <button type="button" onclick="hilang()" id="reset">Reset</button>
 
                         </form>
                     </div>
                     <div class="hasil-luas">
                         <h3>Hasil</h3>
-                        <p>K = a + b + c</p>
-                        <p>K = <span id="a"></span> + <span id="b"></span> + <span id="c"></span></p>
-                        <p class="hasil-segitiga">K = <span id="hasil"></span></p>
+                        <p>L = 1/2 x a x t</p>
+                        <p>L = 1/2 x <span id="alas"></span> x <span id="tinggi"></span></p>
+                        <p class="hasil-segitiga">L = <span id="hasil-luas"></span></p>
                     </div>
                 </div>
             </div>
@@ -158,33 +156,33 @@
         </div>
         <div class="footer-end">
             <div class="copyright">
-                <p>Dibuat oleh <a href="">Camela Devs </a> | Copyright 2024.</p>
+                <p>Dibuat oleh <a href="https://www.linkedin.com/in/melvets/" target="_blank">Camela Devs </a> | Copyright 2024.</p>
             </div>
             <div class="sosmed">
-                <a href="">
+                <a href="https://www.instagram.com/mel_elaaa/" target="_blank">
                     <div class="icon">
                         <img src="assets/icon/brand-instagram.svg" alt="">
                     </div>
                 </a>
-                <a href="">
+                <a href="https://web.facebook.com/Melaaaaa.0/" target="_blank">
                     <div class="icon">
                         <img src="assets/icon/brand-facebook-filled.svg" alt="">
                     </div>
                 </a>
-                <a href="">
+                <a href="https://github.com/Melvets" target="_blank">
                     <div class="icon">
                         <img src="assets/icon/brand-github.svg" alt="">
                     </div>
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/melvets/" target="_blank">
                     <div class="icon">
                         <img src="assets/icon/brand-linkedin.svg" alt="">
                     </div>
                 </a>
             </div>
             <div class="privacy">
-                <a href="">Privacy Policy</a>
-                <a href="">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
             </div>
         </div>
     </footer>

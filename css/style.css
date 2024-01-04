@@ -14,7 +14,7 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -80,7 +80,7 @@ nav {
 
 .welcome .text-group .button {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .welcome .text-group .button a {
@@ -93,6 +93,7 @@ nav {
     padding: 0.4rem 1rem;
     margin-right: 10px;
     font-weight: 600;
+    filter: drop-shadow(5px 10px 4px lightgray);
 }
 
 .welcome .text-group .button a svg {
@@ -104,7 +105,7 @@ nav {
       transform: translateX(10px);
 }
 
-.pic1 {
+.pic-welcome {
     width: 400px;
     height: 400px;
     background-color: var(--yellow);
@@ -115,7 +116,7 @@ nav {
     align-items: center;
 }
 
-.pic1 img {
+.pic-welcome img {
     width: 400px;
 }
 
@@ -183,8 +184,7 @@ nav {
     padding: 20px 30px;
     margin-bottom: 1rem;
     border-radius: 10px;
-    /* width: 400px; */
-    /* height: 200px; */
+    filter: drop-shadow(3px 8px 8px gray);
 }
 
 .flex .form h3 {
@@ -193,7 +193,7 @@ nav {
 }
 
 
-.rumus .rumus_ {
+.rumus .detail-rumus {
     text-align: center;
     padding-left: 0;
     font-weight: bold;
@@ -204,15 +204,20 @@ nav {
     text-align: center;
 }
 
-.flex .form .input_ input {
+.input p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8em;
+    color: red;
+}
+
+.flex .form .input input {
     padding: 8px;
     width: 380px;
     border: lightgray solid 1px;
     border-radius: 5px;
-    margin-bottom: 0.5rem;
 }
 
-.flex .form .input_ input:focus{
+.flex .form .input input:focus{
     border: #FFD700 solid 1px;
     outline: none;
 }
@@ -226,7 +231,7 @@ nav {
     border: none;
 }
 
-.flex .form form button:hover {
+.flex .form form button:hover{
     background-color: var(--gold);
     cursor: pointer;
 }
@@ -348,6 +353,7 @@ footer .footer-flex .nav a:hover {
 
 .sosmed .icon:hover {
     border: var(--darkorange) solid 2px;
+    filter: drop-shadow(-1px 1px  1px var(--yellow));
 }
 
 .privacy {
